@@ -6,7 +6,7 @@ import sys
 import argparse
 from datetime import datetime
 
-max_width = 1920
+max_width = 480
 
 
 def Get_FPS_FlameCount(path):
@@ -105,7 +105,6 @@ def main():
     # gifにしたい範囲を指定
     start_sec = 0
     stop_sec = Get_VideoLength(fps, count)
-
     if stop_sec < 5:
         print("[error]")
         print("動画が短すぎます")
@@ -117,7 +116,7 @@ def main():
 
     start_frame = start_sec
     stop_frame = int(stop_sec * fps)
-    step_frame = 10
+    step_frame = 3
 
     print("---- GIF 作成開始 ----")
 
